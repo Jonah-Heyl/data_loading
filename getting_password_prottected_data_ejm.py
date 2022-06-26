@@ -8,7 +8,7 @@ try:
 except:
     os.system("pip install requests")
 
-class wt():
+class ejmdt():
     def __init__(self,link,user='bob',password='1234',ref_token='NA',access_token='NA'):
         self.link=link
         self.user= user
