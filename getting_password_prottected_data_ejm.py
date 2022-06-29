@@ -69,7 +69,7 @@ class ejmdt():
         except(FileNotFoundError):
             print("Create a file with your username and passowrd, useing makefile()")
 
-        return wt(self.link,user,password,ref_token,access_token)
+        return ejmdt(self.link,user,password,ref_token,access_token)
 
     
     
@@ -140,21 +140,21 @@ class ejmdt():
         if slice==0:
             self.get_new_access_token()
             slice=self.get_data()
-#,wt(self.link,self.user,self.password,self.ref_token,self.access_token)
         return slice
 
     @staticmethod
     def full_run(link):
-        t=wt(link)
+        t=ejmdt(link)
         t=t.file_y_n()
         data=t.run()
         return(data)
 
 
+
 #best way:
 
-#wt.make_file('user','password') # for first time use
-#wt.full_run("https://support.econjobmarket.org/api/slice")
+#ejmdt.make_file('user','password') # for first time use
+#ejmdt.full_run("https://support.econjobmarket.org/api/slice")
 
 
 
